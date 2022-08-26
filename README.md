@@ -4,6 +4,8 @@
 
 ### Directory Structure
 ```bash
-Backend
-    └── OAuth2.md
+.
+└── Backend
+    ├── OAuth2.md
+    └── assets
 ```
