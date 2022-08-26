@@ -4,7 +4,7 @@
 
 ### Directory Structure
 ```bash
-.
+learn
 └── Backend
     ├── OAuth2.md
     └── assets
