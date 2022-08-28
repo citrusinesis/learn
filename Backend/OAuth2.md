@@ -4,6 +4,12 @@
   - [Main Terms](#main-terms)
   - [OAuth Role](#oauth-role)
   - [Abstract Protocol Flow](#abstract-protocol-flow)
+  - [Client Registration](#client-registration)
+  - [Obtaining Authorization](#obtaining-authorization)
+    - [Authorization Code Grant](#authorization-code-grant)
+    - [Implicit Grant](#implicit-grant)
+    - [Resource Owner Password Credentials Grant](#resource-owner-password-credentials-grant)
+    - [Client Credentials Grant](#client-credentials-grant)
 
 ## Introduction
 * OAuth 2.0이란 사용자의 정보에 대한 권한을 부여하는 `산업 표준 프로토콜`의 일종
@@ -42,3 +48,27 @@
 > 1, 2단계 -> 유저 - 클라: 접근 인가 과정<br />
 > 3, 4단계 -> Auth 서버 - 클라: 사용자 인증 및 토큰 발행 과정<br />
 > 5, 6단계 -> Resource 서버 - 클라: 리소스 요청 과정
+
+## Client Registration
+* OAuth를 사용하기 전에, 클라이언트를 리소스 요청하고자 하는 서비스에 등록해야함
+* 등록 정보
+  - 어플리케이션 이름
+  - 어플리케이션 웹사이트
+  - Redirect URI(Callback URL) -> Authourizaion Server가 code를 전송해줄 주소
+* 어플리케이션 등록시 Client Credentials 발급
+  1. Client ID - Client 구분해 줄수 있는 Identity
+  2. Client Secret - 계정 접근 요청 Secret, Access Token 발급시 사용
+
+## Obtaining Authorization
+* OAuth 2.0은 권한 인가를 4가지 방법으로 구분하여 지원함.
+### Authorization Code Grant
+![Authorization Code Grant](assets/oauth_authcode.png)
+
+### Implicit Grant
+![Implicit Grant](assets/oauth_implicit_grant.png)
+
+### Resource Owner Password Credentials Grant
+![Resource Owner Password Credentials Grant](assets/oauth_password.png)
+
+### Client Credentials Grant
+![Client Credentials Grant](assets/oauth_client_credentials.png)
